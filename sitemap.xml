@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yjfyqfzs.github.io/2023/05/25/XiaozhengChat/</loc>
+    
+    <lastmod>2023-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yjfyqfzs.github.io/2022/12/09/Ue%E8%93%9D%E5%9B%BE%E4%BF%AE%E6%94%B9Sequence/</loc>
     
     <lastmod>2023-03-06</lastmod>
@@ -58,7 +67,7 @@
 
   <url>
     <loc>http://yjfyqfzs.github.io/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
