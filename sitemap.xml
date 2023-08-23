@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/08/23/StreamlitGradio/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/08/23/StreamlitGradio/</loc>
     
     <lastmod>2023-08-23</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/07/13/Langchain%E7%9B%B8%E5%85%B3%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/07/13/Langchain%E7%9B%B8%E5%85%B3%E5%BA%93%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2023-07-13</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/05/25/XiaozhengChat/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/05/25/XiaozhengChat/</loc>
     
     <lastmod>2023-05-25</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2022/12/09/Ue%E8%93%9D%E5%9B%BE%E4%BF%AE%E6%94%B9Sequence/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2022/12/09/Ue%E8%93%9D%E5%9B%BE%E4%BF%AE%E6%94%B9Sequence/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/01/18/ueplug/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/01/18/ueplug/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/03/04/UeMayaControlRig/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/03/04/UeMayaControlRig/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2022/12/15/MayaApi/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2022/12/15/MayaApi/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2023/01/05/GithubHexo/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2023/01/05/GithubHexo/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://yjfyqfzs.github.io/2022/12/02/DNAimg/</loc>
+    <loc>http://yjfyqfzs.github.io/project/2022/12/02/DNAimg/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -84,7 +84,7 @@
   
 
   <url>
-    <loc>http://yjfyqfzs.github.io/</loc>
+    <loc>http://yjfyqfzs.github.io/project</loc>
     <lastmod>2023-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
