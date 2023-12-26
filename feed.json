@@ -7,6 +7,22 @@
     "home_page_url": "http://yjfyqfzs.github.io",
     "items": [
         {
+            "id": "http://yjfyqfzs.github.io/2023/12/22/BP_Fly/",
+            "url": "http://yjfyqfzs.github.io/2023/12/22/BP_Fly/",
+            "title": "蓝图实现蝴蝶随机选择固定路径飞行",
+            "date_published": "2023-12-22T11:52:33.000Z",
+            "content_html": "<p><strong>整体目标</strong><br>\n目前已有资产为多个单独蝴蝶粒子，需要使这些蝴蝶随机且均匀地出现，并在固定的多条路径中随机选择一条路径，沿该路径飞行。</p>\n<p><strong>设置路径</strong><br>\n新建 <code>Actor</code>  类为 <code>BP_Spline</code>  存放所有路径。在蓝图中新建多条 <code>Spline</code> ，并保存在数组变量中。</p>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img1.png\"> </div>\n<p><strong>设置蝴蝶类</strong><br>\n新建结构体 <code>Allpara</code> ，用来保存蝴蝶粒子类型，蝴蝶大小，飞行速度。</p>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img2.png\"> </div>\n<p>新建 <code>Actor</code>  类为 <code>BP_FlySingle</code>  表示单个飞行的蝴蝶，也可用于表示其他按路径运动的粒子。<br>\n新建样条线和粒子组件，外部输入的参数如下。</p>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img3.png\" width=\"300\"> </div>\n<p>蝴蝶类中添加以下事件，注意，所有事件都需要勾选 <code>Call in Editor</code> ，在 <code>Sequencer</code>  中添加事件关键帧后，也需要右键勾线 <code>Call inE ditor</code> <br>\n 在生成事件中，外部获取的 <code>inputpara</code>  用来设置粒子类型，飞行速度等。 <code>path</code>  为外部获取的路径，赋值给 <code>Spline</code> ，但 <code>Spline</code>  与根节点之间仍无相对变换。当飞行粒子的正前方与路径不同时，用 <code>rotationOffset</code>  来设置两者之间的旋转。</p>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img4.png\"> </div>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img5.png\"> </div>\n<p><strong>设置随机生成事件</strong><br>\n新建 <code>Actor</code>  类为 <code>MyEventActor</code> , 实现随机生成蝴蝶，选择路径和更新。<br>\n初始位置，路径选择等参数取随机数即可。不同类型的蝴蝶需要尽可能都出现，且避免某一种类型出现过多，此时不能每次遍历时都抽取随机索引，采用随机选择起始索引，顺序生成各类型蝴蝶。<br>\n此外，由于相应事件在 <code>sequencer</code>  中调用，蓝图中不能使用 <code>TimeLine</code> ，应当使用 <code>SetTimer</code>  来实现随时间更新。</p>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img7.png\" width=\"200\"> </div>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img8.png\" width=\"200\"> </div>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img9.png\" width=\"300\"> </div>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img10.png\" width=\"200\"> </div>\n<div align=\"center\"> <img data-src=\"/2023/12/22/BP_Fly/img11.png\"> </div>",
+            "tags": []
+        },
+        {
+            "id": "http://yjfyqfzs.github.io/2023/10/20/Oculus/",
+            "url": "http://yjfyqfzs.github.io/2023/10/20/Oculus/",
+            "title": "Oculus恢复出厂设置与联网激活",
+            "date_published": "2023-10-20T14:37:11.000Z",
+            "content_html": "<p>近期因不明原因无法在收的二手 quest2 里切换自己的账号，恢复出厂设置重新激活。</p>\n<p><strong>恢复出厂设置</strong></p>\n<p>关机后长按电源和音量减键 5 秒左右，按音量键上下选择 <code>Factory reset</code> 。重新启动后需要使用手机 Oculus App 进行配对，按头盔中的提示操作即可。</p>\n<p><strong>联网</strong><br>\n由于 quest2 需要科学上网，此处使用电脑开启热点，quest2 连接电脑热点。</p>\n<p>点击 <code>Manage</code>  后安装组件至 <code>Service Mode</code>  旁的图标为绿色，打开 <code>TUN Mode</code> 。</p>\n<div align=\"center\"> <img data-src=\"/2023/10/20/Oculus/img1.png\"> </div>\n此时在电脑搜索框中搜 “网络连接”，出现clash虚拟网卡。\n<p>以管理员身份运行 <code>cmd</code> ，输入命令 <code>netsh wlan set hostednetwork mode=allow</code>  和 <code>netsh wlan set hostednetwork ssid=*wifi名称* key=*wifi密码*</code>  设置热点密码，输入 <code>netsh wlan start hostednetwork</code>  开启热点。此外也可以直接在<strong>网络和 Internet - 移动热点</strong>中开启。</p>\n<p>此时出现虚拟连接</p>\n<div align=\"center\"> <img data-src=\"/2023/10/20/Oculus/img2.png\"> </div>\n<p>右键 <code>clash</code>  选择 <code>属性</code> ，设置共享，即可用 quest2 连接电脑热点。</p>\n<div align=\"center\"> <img data-src=\"/2023/10/20/Oculus/img3.png\"> </div>\n<p><strong>其他 tips</strong></p>\n<p><strong>Oculus 电脑端软件界面卡住不动：</strong> 改 Host 文件。<br>\n<strong>头盔连接电脑找不到盘符：</strong> 在头盔的 <code>通知</code> 中查找 <code>USB</code>  相关通知并开启。<br>\n<strong>开启开发者模式：</strong> <span class=\"exturl\" data-url=\"aHR0cHM6Ly9kZXZlbG9wZXIub2N1bHVzLmNvbS9tYW5hZ2UvdmVyaWZ5Lw==\">https://developer.oculus.com/manage/verify/</span> 选择双重认证，移动手机号可用。</p>\n",
+            "tags": []
+        },
+        {
             "id": "http://yjfyqfzs.github.io/2023/08/23/StreamlitGradio/",
             "url": "http://yjfyqfzs.github.io/2023/08/23/StreamlitGradio/",
             "title": "streamlit与gradio使用对比",
