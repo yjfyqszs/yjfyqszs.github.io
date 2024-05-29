@@ -57,36 +57,6 @@
         <updated>2024-02-23T02:33:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://yjfyqfzs.github.io/2023/12/22/BP_Fly/</id>
-        <title>蓝图实现蝴蝶随机选择固定路径飞行</title>
-        <link rel="alternate" href="http://yjfyqfzs.github.io/2023/12/22/BP_Fly/"/>
-        <content type="html">&lt;p&gt;&lt;strong&gt;整体目标&lt;/strong&gt;&lt;br&gt;
-目前已有资产为多个单独蝴蝶粒子，需要使这些蝴蝶随机且均匀地出现，并在固定的多条路径中随机选择一条路径，沿该路径飞行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;设置路径&lt;/strong&gt;&lt;br&gt;
-新建 &lt;code&gt;Actor&lt;/code&gt;  类为 &lt;code&gt;BP_Spline&lt;/code&gt;  存放所有路径。在蓝图中新建多条 &lt;code&gt;Spline&lt;/code&gt; ，并保存在数组变量中。&lt;/p&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img1.png&#34;&gt; &lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;设置蝴蝶类&lt;/strong&gt;&lt;br&gt;
-新建结构体 &lt;code&gt;Allpara&lt;/code&gt; ，用来保存蝴蝶粒子类型，蝴蝶大小，飞行速度。&lt;/p&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img2.png&#34;&gt; &lt;/div&gt;
-&lt;p&gt;新建 &lt;code&gt;Actor&lt;/code&gt;  类为 &lt;code&gt;BP_FlySingle&lt;/code&gt;  表示单个飞行的蝴蝶，也可用于表示其他按路径运动的粒子。&lt;br&gt;
-新建样条线和粒子组件，外部输入的参数如下。&lt;/p&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img3.png&#34; width=&#34;300&#34;&gt; &lt;/div&gt;
-&lt;p&gt;蝴蝶类中添加以下事件，注意，所有事件都需要勾选 &lt;code&gt;Call in Editor&lt;/code&gt; ，在 &lt;code&gt;Sequencer&lt;/code&gt;  中添加事件关键帧后，也需要右键勾线 &lt;code&gt;Call inE ditor&lt;/code&gt; &lt;br&gt;
- 在生成事件中，外部获取的 &lt;code&gt;inputpara&lt;/code&gt;  用来设置粒子类型，飞行速度等。 &lt;code&gt;path&lt;/code&gt;  为外部获取的路径，赋值给 &lt;code&gt;Spline&lt;/code&gt; ，但 &lt;code&gt;Spline&lt;/code&gt;  与根节点之间仍无相对变换。当飞行粒子的正前方与路径不同时，用 &lt;code&gt;rotationOffset&lt;/code&gt;  来设置两者之间的旋转。&lt;/p&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img4.png&#34;&gt; &lt;/div&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img5.png&#34;&gt; &lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;设置随机生成事件&lt;/strong&gt;&lt;br&gt;
-新建 &lt;code&gt;Actor&lt;/code&gt;  类为 &lt;code&gt;MyEventActor&lt;/code&gt; , 实现随机生成蝴蝶，选择路径和更新。&lt;br&gt;
-初始位置，路径选择等参数取随机数即可。不同类型的蝴蝶需要尽可能都出现，且避免某一种类型出现过多，此时不能每次遍历时都抽取随机索引，采用随机选择起始索引，顺序生成各类型蝴蝶。&lt;br&gt;
-此外，由于相应事件在 &lt;code&gt;sequencer&lt;/code&gt;  中调用，蓝图中不能使用 &lt;code&gt;TimeLine&lt;/code&gt; ，应当使用 &lt;code&gt;SetTimer&lt;/code&gt;  来实现随时间更新。&lt;/p&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img7.png&#34; width=&#34;200&#34;&gt; &lt;/div&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img8.png&#34; width=&#34;200&#34;&gt; &lt;/div&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img9.png&#34; width=&#34;300&#34;&gt; &lt;/div&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img10.png&#34; width=&#34;200&#34;&gt; &lt;/div&gt;
-&lt;div align=&#34;center&#34;&gt; &lt;img data-src=&#34;/2023/12/22/BP_Fly/img11.png&#34;&gt; &lt;/div&gt;</content>
-        <updated>2023-12-22T11:52:33.000Z</updated>
-    </entry>
-    <entry>
         <id>http://yjfyqfzs.github.io/2023/10/20/Oculus/</id>
         <title>Oculus恢复出厂设置与联网激活</title>
         <link rel="alternate" href="http://yjfyqfzs.github.io/2023/10/20/Oculus/"/>
